@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — Compush Media</title>
+  <meta name="description" content="Politique de confidentialité et de protection des données personnelles de Compush Media, éditeur de Fidelavis." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Logo image ── */
+    .logo--img          { display: flex; align-items: center; }
+    .logo__img          { height: 36px; width: auto; display: block; object-fit: contain; }
+    .logo__img--sm      { height: 28px; width: auto; display: block; object-fit: contain; }
+
+    /* ── Page légale (identique mentions légales) ── */
+    .legal-hero {
+      background: var(--clr-dark);
+      padding: calc(var(--sp-4xl) + 4rem) 0 var(--sp-xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 40% 0%, rgba(61,114,232,.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .legal-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--clr-gold), transparent);
+    }
+    .legal-hero__inner { position: relative; z-index: 1; }
+    .legal-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,.4);
+      margin-bottom: var(--sp-lg);
+      transition: color var(--dur);
+    }
+    .legal-hero__back:hover { color: var(--clr-gold); }
+    .legal-hero__tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clr-gold);
+      background: rgba(201,169,110,.1);
+      border: 1px solid rgba(201,169,110,.2);
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: var(--sp-md);
+    }
+    .legal-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--clr-white);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-sm);
+    }
+    .legal-hero__date {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,.35);
+    }
+
+    /* ── Legal body ── */
+    .legal-body {
+      background: var(--clr-off-white);
+      padding: var(--sp-4xl) 0;
+    }
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: var(--sp-3xl);
+      align-items: start;
+    }
+
+    /* Sidebar */
+    .legal-nav {
+      position: sticky;
+      top: 6rem;
+    }
+    .legal-nav__title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clr-text-3);
+      margin-bottom: var(--sp-md);
+    }
+    .legal-nav__list { display: flex; flex-direction: column; gap: 2px; }
+    .legal-nav__link {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--clr-text-2);
+      padding: 0.45rem 0.75rem;
+      border-radius: var(--r-sm);
+      border-left: 2px solid transparent;
+      transition: color var(--dur), border-color var(--dur), background var(--dur);
+    }
+    .legal-nav__link:hover {
+      color: var(--clr-gold);
+      border-color: var(--clr-gold);
+      background: var(--clr-gold-pale);
+    }
+
+    /* Content */
+    .legal-content { min-width: 0; }
+    .legal-section {
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--r-xl);
+      padding: var(--sp-xl);
+      margin-bottom: var(--sp-md);
+    }
+    .legal-section__number {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clr-gold);
+      margin-bottom: 0.4rem;
+    }
+    .legal-section__title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--clr-text);
+      margin-bottom: var(--sp-lg);
+      padding-bottom: var(--sp-md);
+      border-bottom: 1px solid var(--clr-border);
+    }
+    .legal-section p {
+      font-size: 0.92rem;
+      color: var(--clr-text-2);
+      line-height: 1.8;
+      margin-bottom: var(--sp-md);
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section strong { color: var(--clr-text); font-weight: 600; }
+    .legal-section a {
+      color: var(--clr-gold-deep);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    .legal-section a:hover { color: var(--clr-gold); }
+
+    .legal-section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin-bottom: var(--sp-md);
+    }
+    .legal-section ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--clr-text-2);
+      line-height: 1.65;
+    }
+    .legal-section ul li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--clr-gold);
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+
+    .legal-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-bottom: var(--sp-md);
+    }
+    .legal-info-table tr { border-bottom: 1px solid var(--clr-border); }
+    .legal-info-table tr:last-child { border-bottom: none; }
+    .legal-info-table td {
+      padding: 0.7rem 0.5rem;
+      color: var(--clr-text-2);
+      vertical-align: top;
+    }
+    .legal-info-table td:first-child {
+      font-weight: 600;
+      color: var(--clr-text);
+      width: 38%;
+    }
+
+    .legal-highlight {
+      background: var(--clr-gold-pale);
+      border: 1px solid rgba(201,169,110,.2);
+      border-radius: var(--r-md);
+      padding: var(--sp-md) var(--sp-lg);
+      font-size: 0.88rem;
+      color: var(--clr-text-2);
+      line-height: 1.7;
+      margin-top: var(--sp-md);
+    }
+    .legal-highlight strong { color: var(--clr-gold-deep); }
+
+    /* RGPD rights grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-md);
+      margin-bottom: var(--sp-md);
+    }
+    .right-card {
+      background: var(--clr-light);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--r-lg);
+      padding: var(--sp-lg);
+    }
+    .right-card__icon {
+      width: 38px; height: 38px;
+      background: var(--clr-gold-pale);
+      border-radius: var(--r-sm);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--clr-gold);
+      margin-bottom: var(--sp-sm);
+    }
+    .right-card__title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--clr-text);
+      margin-bottom: 0.3rem;
+    }
+    .right-card__text {
+      font-size: 0.8rem;
+      color: var(--clr-text-3);
+      line-height: 1.6;
+    }
+
+    /* Data table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      margin-bottom: var(--sp-md);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    .data-table thead tr {
+      background: var(--clr-dark);
+    }
+    .data-table thead td {
+      color: rgba(255,255,255,.7);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.75rem 1rem;
+    }
+    .data-table tbody tr { border-bottom: 1px solid var(--clr-border); }
+    .data-table tbody tr:last-child { border-bottom: none; }
+    .data-table tbody td {
+      padding: 0.75rem 1rem;
+      color: var(--clr-text-2);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .data-table tbody td:first-child { font-weight: 600; color: var(--clr-text); }
+
+    @media (max-width: 800px) {
+      .legal-layout { grid-template-columns: 1fr; }
+      .legal-nav { position: static; margin-bottom: var(--sp-lg); }
+      .rights-grid { grid-template-columns: 1fr; }
+      .data-table { font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- HEADER -->
+  <header class="header scrolled" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo logo--img">
+        <img src="LogoCompushMédia.png" alt="Compush Media" class="logo__img" />
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html#accueil"   class="nav__link">Accueil</a></li>
+          <li><a href="index.html#fidelavis"  class="nav__link">Fidelavis</a></li>
+          <li><a href="index.html#approche"   class="nav__link">Notre approche</a></li>
+          <li><a href="index.html#offres"     class="nav__link">Offres</a></li>
+          <li><a href="index.html#contact"    class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="index.html#contact" class="btn btn--primary btn--sm header__cta">Demander une démo</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO LÉGAL -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <a href="index.html" class="legal-hero__back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Retour au site
+      </a>
+      <div class="legal-hero__tag">Protection des données</div>
+      <h1 class="legal-hero__title">Politique de confidentialité</h1>
+      <p class="legal-hero__date">Dernière mise à jour : avril 2025 — Conforme RGPD (Règlement UE 2016/679)</p>
+    </div>
+  </section>
+
+  <!-- CORPS -->
+  <div class="legal-body">
+    <div class="container">
+      <div class="legal-layout">
+
+        <!-- Sidebar -->
+        <aside class="legal-nav">
+          <p class="legal-nav__title">Sommaire</p>
+          <ul class="legal-nav__list">
+            <li><a href="#intro"          class="legal-nav__link">1. Introduction</a></li>
+            <li><a href="#responsable"    class="legal-nav__link">2. Responsable de traitement</a></li>
+            <li><a href="#collecte"       class="legal-nav__link">3. Données collectées</a></li>
+            <li><a href="#finalites"      class="legal-nav__link">4. Finalités &amp; bases légales</a></li>
+            <li><a href="#conservation"   class="legal-nav__link">5. Conservation</a></li>
+            <li><a href="#destinataires"  class="legal-nav__link">6. Destinataires</a></li>
+            <li><a href="#transferts"     class="legal-nav__link">7. Transferts hors UE</a></li>
+            <li><a href="#droits"         class="legal-nav__link">8. Vos droits</a></li>
+            <li><a href="#cookies"        class="legal-nav__link">9. Cookies</a></li>
+            <li><a href="#fidelavis-data" class="legal-nav__link">10. Données Fidelavis</a></li>
+            <li><a href="#securite"       class="legal-nav__link">11. Sécurité</a></li>
+            <li><a href="#modifications"  class="legal-nav__link">12. Modifications</a></li>
+            <li><a href="#contact-rgpd"   class="legal-nav__link">13. Contact DPO</a></li>
+          </ul>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="legal-content">
+
+          <!-- 1. Introduction -->
+          <article class="legal-section" id="intro">
+            <div class="legal-section__number">Article 01</div>
+            <h2 class="legal-section__title">Introduction</h2>
+            <p>La présente Politique de confidentialité décrit la manière dont <strong>Compush Media</strong> (ci-après « nous », « notre » ou « la Société ») collecte, utilise, conserve et protège vos données personnelles dans le cadre de l'utilisation du site <strong>compushmedia.com</strong> et du produit <strong>Fidelavis</strong>.</p>
+            <p>Nous nous engageons à traiter vos données personnelles conformément au <strong>Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679)</strong> et à la loi Informatique et Libertés n° 78-17 du 6 janvier 1978 modifiée.</p>
+            <p>En accédant à notre site ou en utilisant nos services, vous reconnaissez avoir pris connaissance de la présente politique. Si vous n'en acceptez pas les termes, nous vous invitons à ne pas utiliser nos services.</p>
+          </article>
+
+          <!-- 2. Responsable de traitement -->
+          <article class="legal-section" id="responsable">
+            <div class="legal-section__number">Article 02</div>
+            <h2 class="legal-section__title">Responsable de traitement</h2>
+            <p>Le responsable du traitement de vos données personnelles est :</p>
+            <table class="legal-info-table">
+              <tr>
+                <td>Société</td>
+                <td><strong>Compush Media</strong></td>
+              </tr>
+              <tr>
+                <td>Forme juridique</td>
+                <td>EI (Entrepreneur individuel)</td>
+              </tr>
+              <tr>
+                <td>Siège social</td>
+                <td>61 Bd National, 92250 La Garenne-Colombes</td>
+              </tr>
+              <tr>
+                <td>SIRET</td>
+                <td>51834199500018</td>
+              </tr>
+              <tr>
+                <td>Email DPO</td>
+                <td><a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a></td>
+              </tr>
+              <tr>
+                <td>Téléphone</td>
+                <td>07 44 96 71 70</td>
+              </tr>
+            </table>
+          </article>
+
+          <!-- 3. Données collectées -->
+          <article class="legal-section" id="collecte">
+            <div class="legal-section__number">Article 03</div>
+            <h2 class="legal-section__title">Données collectées</h2>
+            <p>Nous collectons uniquement les données strictement nécessaires aux finalités décrites ci-après. Ces données peuvent être collectées de plusieurs façons :</p>
+
+            <p><strong>Données collectées directement :</strong></p>
+            <ul>
+              <li>Nom et prénom</li>
+              <li>Adresse e-mail professionnelle</li>
+              <li>Numéro de téléphone (si renseigné)</li>
+              <li>Type de commerce ou d'activité</li>
+              <li>Messages envoyés via nos formulaires de contact</li>
+            </ul>
+
+            <p><strong>Données collectées automatiquement :</strong></p>
+            <ul>
+              <li>Adresse IP (anonymisée)</li>
+              <li>Type et version du navigateur</li>
+              <li>Pages visitées et durée de navigation</li>
+              <li>Système d'exploitation</li>
+              <li>Source de la visite (référent)</li>
+            </ul>
+
+            <p><strong>Données collectées via Fidelavis :</strong></p>
+            <p>Dans le cadre de l'utilisation de la solution Fidelavis par les commerçants partenaires, des données relatives aux clients finaux peuvent être collectées. Ces données sont décrites à l'article 10 de la présente politique.</p>
+
+            <div class="legal-highlight">
+              <strong>Principe de minimisation :</strong> nous ne collectons que les données strictement nécessaires à la fourniture de nos services. Aucune donnée sensible (santé, origine ethnique, convictions religieuses, etc.) n'est collectée.
+            </div>
+          </article>
+
+          <!-- 4. Finalités & bases légales -->
+          <article class="legal-section" id="finalites">
+            <div class="legal-section__number">Article 04</div>
+            <h2 class="legal-section__title">Finalités et bases légales des traitements</h2>
+            <p>Vos données sont traitées sur la base des fondements légaux suivants :</p>
+
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <td>Finalité</td>
+                  <td>Données concernées</td>
+                  <td>Base légale</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Traitement des demandes de démo</td>
+                  <td>Nom, email, téléphone, type de commerce</td>
+                  <td>Intérêt légitime / pré-contrat</td>
+                </tr>
+                <tr>
+                  <td>Envoi de communications commerciales</td>
+                  <td>Email, prénom</td>
+                  <td>Consentement (opt-in)</td>
+                </tr>
+                <tr>
+                  <td>Amélioration du site et des services</td>
+                  <td>Données de navigation anonymisées</td>
+                  <td>Intérêt légitime</td>
+                </tr>
+                <tr>
+                  <td>Gestion de la relation client (CRM)</td>
+                  <td>Nom, email, historique des échanges</td>
+                  <td>Exécution du contrat</td>
+                </tr>
+                <tr>
+                  <td>Facturation et obligations comptables</td>
+                  <td>Coordonnées, données de facturation</td>
+                  <td>Obligation légale</td>
+                </tr>
+                <tr>
+                  <td>Lutte contre la fraude et sécurité</td>
+                  <td>Adresse IP, logs de connexion</td>
+                  <td>Intérêt légitime</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Vous pouvez retirer votre consentement à tout moment lorsque le traitement est fondé sur celui-ci, sans que cela ne remette en cause la licéité des traitements effectués antérieurement.</p>
+          </article>
+
+          <!-- 5. Conservation -->
+          <article class="legal-section" id="conservation">
+            <div class="legal-section__number">Article 05</div>
+            <h2 class="legal-section__title">Durée de conservation</h2>
+            <p>Vos données sont conservées pendant la durée strictement nécessaire aux finalités pour lesquelles elles ont été collectées, et dans le respect des délais légaux en vigueur.</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <td>Type de données</td>
+                  <td>Durée de conservation</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Prospects (demandes de démo)</td>
+                  <td>3 ans à compter du dernier contact</td>
+                </tr>
+                <tr>
+                  <td>Clients actifs</td>
+                  <td>Durée du contrat + 5 ans (prescription légale)</td>
+                </tr>
+                <tr>
+                  <td>Données de facturation</td>
+                  <td>10 ans (obligation comptable)</td>
+                </tr>
+                <tr>
+                  <td>Cookies analytiques</td>
+                  <td>13 mois maximum</td>
+                </tr>
+                <tr>
+                  <td>Logs de connexion</td>
+                  <td>12 mois (obligation légale)</td>
+                </tr>
+                <tr>
+                  <td>Données clients Fidelavis</td>
+                  <td>Durée d'abonnement + 1 an</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>À l'expiration de ces délais, vos données sont supprimées de manière sécurisée ou anonymisées définitivement.</p>
+          </article>
+
+          <!-- 6. Destinataires -->
+          <article class="legal-section" id="destinataires">
+            <div class="legal-section__number">Article 06</div>
+            <h2 class="legal-section__title">Destinataires des données</h2>
+            <p>Vos données personnelles sont traitées par les équipes internes de Compush Media habilitées à cet effet. Elles peuvent également être transmises aux sous-traitants suivants, agissant exclusivement sur nos instructions :</p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <td>Prestataire</td>
+                  <td>Rôle</td>
+                  <td>Localisation</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>GitHub Pages</td>
+                  <td>Hébergement du site web</td>
+                  <td>États-Unis (SCC)</td>
+                </tr>
+                <tr>
+                  <td>Outil d'emailing (ex : Brevo, Mailchimp)</td>
+                  <td>Envoi de communications</td>
+                  <td>UE / États-Unis (SCC)</td>
+                </tr>
+                <tr>
+                  <td>Outil analytique</td>
+                  <td>Mesure d'audience anonymisée</td>
+                  <td>UE de préférence</td>
+                </tr>
+                <tr>
+                  <td>CRM</td>
+                  <td>Gestion de la relation client</td>
+                  <td>À préciser</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Vos données ne sont <strong>jamais vendues, louées ou cédées</strong> à des tiers à des fins commerciales propres à ces tiers.</p>
+          </article>
+
+          <!-- 7. Transferts hors UE -->
+          <article class="legal-section" id="transferts">
+            <div class="legal-section__number">Article 07</div>
+            <h2 class="legal-section__title">Transferts de données hors Union Européenne</h2>
+            <p>Certains de nos prestataires techniques sont établis hors de l'Union Européenne, notamment aux États-Unis. Dans ce cas, nous nous assurons que des garanties appropriées encadrent ces transferts, conformément à l'article 46 du RGPD :</p>
+            <ul>
+              <li>Clauses contractuelles types (CCT) adoptées par la Commission européenne</li>
+              <li>Adhésion au Data Privacy Framework UE-États-Unis (le cas échéant)</li>
+              <li>Évaluation de l'impact du transfert (TIA) si nécessaire</li>
+            </ul>
+            <p>Vous pouvez obtenir une copie des garanties en place en contactant : <a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a>.</p>
+          </article>
+
+          <!-- 8. Droits -->
+          <article class="legal-section" id="droits">
+            <div class="legal-section__number">Article 08</div>
+            <h2 class="legal-section__title">Vos droits sur vos données</h2>
+            <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+
+            <div class="rights-grid">
+              <div class="right-card">
+                <div class="right-card__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <div class="right-card__title">Droit d'accès</div>
+                <div class="right-card__text">Obtenir une copie de vos données personnelles traitées par Compush Media.</div>
+              </div>
+              <div class="right-card">
+                <div class="right-card__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                </div>
+                <div class="right-card__title">Droit de rectification</div>
+                <div class="right-card__text">Faire corriger vos données inexactes ou incomplètes.</div>
+              </div>
+              <div class="right-card">
+                <div class="right-card__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                </div>
+                <div class="right-card__title">Droit à l'effacement</div>
+                <div class="right-card__text">Demander la suppression de vos données (« droit à l'oubli »).</div>
+              </div>
+              <div class="right-card">
+                <div class="right-card__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h5l2 3v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <div class="right-card__title">Droit à la portabilité</div>
+                <div class="right-card__text">Recevoir vos données dans un format structuré et lisible par machine.</div>
+              </div>
+              <div class="right-card">
+                <div class="right-card__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                </div>
+                <div class="right-card__title">Droit d'opposition</div>
+                <div class="right-card__text">S'opposer au traitement fondé sur l'intérêt légitime ou à la prospection commerciale.</div>
+              </div>
+              <div class="right-card">
+                <div class="right-card__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div class="right-card__title">Droit à la limitation</div>
+                <div class="right-card__text">Demander la suspension temporaire du traitement de vos données.</div>
+              </div>
+            </div>
+
+            <p>Pour exercer l'un de ces droits, contactez-nous par email à <a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a> en indiquant votre identité et la nature de votre demande. Nous nous engageons à vous répondre dans un délai d'<strong>un mois</strong> à compter de la réception de votre demande (délai pouvant être prolongé de deux mois pour les demandes complexes).</p>
+            <p>Si vous estimez que vos droits ne sont pas respectés, vous avez le droit d'introduire une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer">cnil.fr/fr/plaintes</a>.</p>
+          </article>
+
+          <!-- 9. Cookies -->
+          <article class="legal-section" id="cookies">
+            <div class="legal-section__number">Article 09</div>
+            <h2 class="legal-section__title">Politique cookies</h2>
+            <p>Un cookie est un petit fichier texte déposé sur votre terminal lors de la consultation du site. Certains cookies sont indispensables au fonctionnement du site ; d'autres, soumis à votre consentement préalable, permettent d'améliorer votre expérience et de mesurer l'audience.</p>
+
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <td>Catégorie</td>
+                  <td>Finalité</td>
+                  <td>Durée max.</td>
+                  <td>Consentement requis</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Techniques essentiels</td>
+                  <td>Fonctionnement du site, sécurité, session</td>
+                  <td>Session / 1 an</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td>Analytiques</td>
+                  <td>Mesure d'audience anonymisée</td>
+                  <td>13 mois</td>
+                  <td>Oui</td>
+                </tr>
+                <tr>
+                  <td>Marketing / Retargeting</td>
+                  <td>Publicité personnalisée</td>
+                  <td>13 mois</td>
+                  <td>Oui</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>Vous pouvez à tout moment modifier vos préférences cookies en utilisant les paramètres de votre navigateur, ou via notre bannière de gestion des cookies lors de votre visite.</p>
+            <p>Pour désactiver les cookies dans votre navigateur :</p>
+            <ul>
+              <li><strong>Chrome :</strong> Paramètres → Confidentialité et sécurité → Cookies</li>
+              <li><strong>Firefox :</strong> Paramètres → Vie privée et sécurité</li>
+              <li><strong>Safari :</strong> Préférences → Confidentialité</li>
+              <li><strong>Edge :</strong> Paramètres → Cookies et autorisations de site</li>
+            </ul>
+          </article>
+
+          <!-- 10. Données Fidelavis -->
+          <article class="legal-section" id="fidelavis-data">
+            <div class="legal-section__number">Article 10</div>
+            <h2 class="legal-section__title">Données collectées via Fidelavis</h2>
+            <p>La solution <strong>Fidelavis</strong> permet aux commerçants partenaires de collecter des données relatives à leurs clients dans le cadre d'un programme de fidélisation. Dans ce contexte :</p>
+            <ul>
+              <li>Le <strong>commerçant</strong> agit en tant que <strong>responsable de traitement</strong> des données de ses clients finaux.</li>
+              <li><strong>Compush Media</strong> agit en tant que <strong>sous-traitant</strong> au sens de l'article 28 du RGPD.</li>
+              <li>Un <strong>contrat de traitement de données (DPA)</strong> est conclu entre Compush Media et chaque commerçant partenaire.</li>
+            </ul>
+
+            <p><strong>Données susceptibles d'être collectées via Fidelavis :</strong></p>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <td>Donnée</td>
+                  <td>Finalité</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Prénom / Nom</td>
+                  <td>Identification dans le programme de fidélité</td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>Envoi de coupons, offres et communications</td>
+                </tr>
+                <tr>
+                  <td>Téléphone</td>
+                  <td>Notifications SMS (si activées)</td>
+                </tr>
+                <tr>
+                  <td>Historique des visites</td>
+                  <td>Calcul des points de fidélité</td>
+                </tr>
+                <tr>
+                  <td>Token push notification</td>
+                  <td>Envoi de notifications sur la mini-app</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Les clients finaux disposent des mêmes droits RGPD (accès, rectification, effacement…) et peuvent les exercer directement auprès du commerçant responsable de traitement, ou auprès de Compush Media à l'adresse <a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a>.</p>
+          </article>
+
+          <!-- 11. Sécurité -->
+          <article class="legal-section" id="securite">
+            <div class="legal-section__number">Article 11</div>
+            <h2 class="legal-section__title">Sécurité des données</h2>
+            <p>Compush Media met en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre toute perte, accès non autorisé, divulgation, altération ou destruction accidentelle, conformément à l'article 32 du RGPD. Ces mesures comprennent notamment :</p>
+            <ul>
+              <li>Chiffrement des communications via le protocole HTTPS (TLS)</li>
+              <li>Accès aux données restreint aux seules personnes habilitées</li>
+              <li>Gestion des accès avec authentification forte</li>
+              <li>Sauvegardes régulières des données</li>
+              <li>Procédure de gestion des violations de données (notification CNIL sous 72h si nécessaire)</li>
+            </ul>
+            <p>En cas de violation de données à caractère personnel susceptible d'engendrer un risque pour vos droits et libertés, nous nous engageons à vous en informer dans les meilleurs délais conformément à l'article 34 du RGPD.</p>
+          </article>
+
+          <!-- 12. Modifications -->
+          <article class="legal-section" id="modifications">
+            <div class="legal-section__number">Article 12</div>
+            <h2 class="legal-section__title">Modifications de la politique</h2>
+            <p>Compush Media se réserve le droit de modifier la présente politique de confidentialité à tout moment, notamment pour se conformer à l'évolution de la réglementation ou à l'évolution de nos pratiques.</p>
+            <p>Toute modification substantielle vous sera notifiée par email (si vous êtes client ou prospect enregistré) et sera signalée par la mise à jour de la date en haut de cette page.</p>
+            <p>Nous vous encourageons à consulter régulièrement cette politique. La version en vigueur est celle accessible sur le site à la date de votre visite.</p>
+            <div class="legal-highlight">
+              Version actuelle : <strong>avril 2025</strong>. Cette politique remplace et annule toutes les versions précédentes.
+            </div>
+          </article>
+
+          <!-- 13. Contact DPO -->
+          <article class="legal-section" id="contact-rgpd">
+            <div class="legal-section__number">Article 13</div>
+            <h2 class="legal-section__title">Contact — Délégué à la Protection des Données</h2>
+            <p>Pour toute question relative à la présente politique, à l'exercice de vos droits, ou pour signaler un problème de confidentialité, vous pouvez contacter notre référent protection des données :</p>
+            <table class="legal-info-table">
+              <tr>
+                <td>Email</td>
+                <td><a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a></td>
+              </tr>
+              <tr>
+                <td>Courrier</td>
+                <td>Compush Media — Objet : RGPD<br>61 Bd National, 92250 La Garenne-Colombes</td>
+              </tr>
+              <tr>
+                <td>Téléphone</td>
+                <td>07 44 96 71 70</td>
+              </tr>
+              <tr>
+                <td>Délai de réponse</td>
+                <td>1 mois maximum à compter de la réception</td>
+              </tr>
+            </table>
+            <p>En cas de réclamation non résolue, vous pouvez saisir la <strong>CNIL</strong> :</p>
+            <table class="legal-info-table">
+              <tr>
+                <td>Site web</td>
+                <td><a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a></td>
+              </tr>
+              <tr>
+                <td>Adresse</td>
+                <td>3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07</td>
+              </tr>
+              <tr>
+                <td>Téléphone</td>
+                <td>01 53 73 22 22</td>
+              </tr>
+            </table>
+          </article>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="LogoCompushMédiapetit.png" alt="Compush Media" class="logo__img--sm" />
+          </div>
+          <p class="footer__tagline">Éditeur de Fidelavis</p>
+          <p class="footer__desc">Agence spécialisée en croissance locale et fidélisation client pour les commerces de proximité.</p>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Navigation</h4>
+          <ul class="footer__nav-list">
+            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html#fidelavis">Fidelavis</a></li>
+            <li><a href="index.html#approche">Notre approche</a></li>
+            <li><a href="index.html#offres">Offres</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Contact</h4>
+          <ul class="footer__nav-list">
+            <li><a href="index.html#contact">Demander une démo</a></li>
+            <li><a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Légal</h4>
+          <ul class="footer__nav-list">
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Compush Media — Tous droits réservés. Éditeur de <strong>Fidelavis</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

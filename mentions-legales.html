@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentions légales — Compush Media</title>
+  <meta name="description" content="Mentions légales de Compush Media, éditeur de Fidelavis." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Logo image ── */
+    .logo--img          { display: flex; align-items: center; }
+    .logo__img          { height: 36px; width: auto; display: block; object-fit: contain; }
+    .logo__img--sm      { height: 28px; width: auto; display: block; object-fit: contain; }
+
+    /* ── Page légale ── */
+    .legal-hero {
+      background: var(--clr-dark);
+      padding: calc(var(--sp-4xl) + 4rem) 0 var(--sp-xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 0%, rgba(201,169,110,.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .legal-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--clr-gold), transparent);
+    }
+    .legal-hero__inner { position: relative; z-index: 1; }
+    .legal-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,.4);
+      margin-bottom: var(--sp-lg);
+      transition: color var(--dur);
+    }
+    .legal-hero__back:hover { color: var(--clr-gold); }
+    .legal-hero__tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clr-gold);
+      background: rgba(201,169,110,.1);
+      border: 1px solid rgba(201,169,110,.2);
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: var(--sp-md);
+    }
+    .legal-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--clr-white);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-sm);
+    }
+    .legal-hero__date {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,.35);
+    }
+
+    /* ── Legal body ── */
+    .legal-body {
+      background: var(--clr-off-white);
+      padding: var(--sp-4xl) 0;
+    }
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: var(--sp-3xl);
+      align-items: start;
+    }
+
+    /* Sidebar nav */
+    .legal-nav {
+      position: sticky;
+      top: 6rem;
+    }
+    .legal-nav__title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clr-text-3);
+      margin-bottom: var(--sp-md);
+    }
+    .legal-nav__list { display: flex; flex-direction: column; gap: 2px; }
+    .legal-nav__link {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--clr-text-2);
+      padding: 0.45rem 0.75rem;
+      border-radius: var(--r-sm);
+      border-left: 2px solid transparent;
+      transition: color var(--dur), border-color var(--dur), background var(--dur);
+    }
+    .legal-nav__link:hover {
+      color: var(--clr-gold);
+      border-color: var(--clr-gold);
+      background: var(--clr-gold-pale);
+    }
+
+    /* Content */
+    .legal-content { min-width: 0; }
+    .legal-section {
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--r-xl);
+      padding: var(--sp-xl);
+      margin-bottom: var(--sp-md);
+    }
+    .legal-section__number {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clr-gold);
+      margin-bottom: 0.4rem;
+    }
+    .legal-section__title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--clr-text);
+      margin-bottom: var(--sp-lg);
+      padding-bottom: var(--sp-md);
+      border-bottom: 1px solid var(--clr-border);
+    }
+    .legal-section p {
+      font-size: 0.92rem;
+      color: var(--clr-text-2);
+      line-height: 1.8;
+      margin-bottom: var(--sp-md);
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section strong { color: var(--clr-text); font-weight: 600; }
+    .legal-section a {
+      color: var(--clr-gold-deep);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    .legal-section a:hover { color: var(--clr-gold); }
+
+    .legal-info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-bottom: var(--sp-md);
+    }
+    .legal-info-table tr { border-bottom: 1px solid var(--clr-border); }
+    .legal-info-table tr:last-child { border-bottom: none; }
+    .legal-info-table td {
+      padding: 0.7rem 0.5rem;
+      color: var(--clr-text-2);
+      vertical-align: top;
+    }
+    .legal-info-table td:first-child {
+      font-weight: 600;
+      color: var(--clr-text);
+      width: 36%;
+      white-space: nowrap;
+    }
+
+    .legal-highlight {
+      background: var(--clr-gold-pale);
+      border: 1px solid rgba(201,169,110,.2);
+      border-radius: var(--r-md);
+      padding: var(--sp-md) var(--sp-lg);
+      font-size: 0.88rem;
+      color: var(--clr-text-2);
+      line-height: 1.7;
+      margin-top: var(--sp-md);
+    }
+    .legal-highlight strong { color: var(--clr-gold-deep); }
+
+    @media (max-width: 800px) {
+      .legal-layout { grid-template-columns: 1fr; }
+      .legal-nav { position: static; margin-bottom: var(--sp-lg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- HEADER -->
+  <header class="header scrolled" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo logo--img">
+        <img src="LogoCompushMédia.png" alt="Compush Media" class="logo__img" />
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html#accueil"  class="nav__link">Accueil</a></li>
+          <li><a href="index.html#fidelavis" class="nav__link">Fidelavis</a></li>
+          <li><a href="index.html#approche"  class="nav__link">Notre approche</a></li>
+          <li><a href="index.html#offres"    class="nav__link">Offres</a></li>
+          <li><a href="index.html#contact"   class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="index.html#contact" class="btn btn--primary btn--sm header__cta">Demander une démo</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO LÉGAL -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <a href="index.html" class="legal-hero__back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Retour au site
+      </a>
+      <div class="legal-hero__tag">Informations légales</div>
+      <h1 class="legal-hero__title">Mentions légales</h1>
+      <p class="legal-hero__date">Dernière mise à jour : avril 2025</p>
+    </div>
+  </section>
+
+  <!-- CORPS -->
+  <div class="legal-body">
+    <div class="container">
+      <div class="legal-layout">
+
+        <!-- Sidebar -->
+        <aside class="legal-nav">
+          <p class="legal-nav__title">Sommaire</p>
+          <ul class="legal-nav__list">
+            <li><a href="#editeur"          class="legal-nav__link">1. Éditeur du site</a></li>
+            <li><a href="#directeur"        class="legal-nav__link">2. Directeur de publication</a></li>
+            <li><a href="#hebergement"      class="legal-nav__link">3. Hébergement</a></li>
+            <li><a href="#propriete"        class="legal-nav__link">4. Propriété intellectuelle</a></li>
+            <li><a href="#responsabilite"   class="legal-nav__link">5. Responsabilité</a></li>
+            <li><a href="#liens"            class="legal-nav__link">6. Liens hypertextes</a></li>
+            <li><a href="#cookies"          class="legal-nav__link">7. Cookies</a></li>
+            <li><a href="#donnees"          class="legal-nav__link">8. Données personnelles</a></li>
+            <li><a href="#contact-legal"    class="legal-nav__link">9. Contact</a></li>
+          </ul>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="legal-content">
+
+          <!-- 1. Éditeur -->
+          <article class="legal-section" id="editeur">
+            <div class="legal-section__number">Article 01</div>
+            <h2 class="legal-section__title">Éditeur du site</h2>
+            <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique (LCEN), voici les informations relatives à l'éditeur du présent site.</p>
+            <table class="legal-info-table">
+              <tr>
+                <td>Raison sociale</td>
+                <td><strong>Compush Media</strong></td>
+              </tr>
+              <tr>
+                <td>Forme juridique</td>
+                <td><!-- Ex : SASU / SAS / SARL -->EI</td>
+              </tr>
+              <tr>
+                <td>Capital social</td>
+                <td>5000€</td>
+              </tr>
+              <tr>
+                <td>Siège social</td>
+                <td>61 Bd National 92250 La Garenne Colombes</td>
+              </tr>
+              <tr>
+                <td>SIRET</td>
+                <td>51834199500018</td>
+              </tr>
+              <tr>
+                <td>RCS</td>
+                <td>Immatriculé au registre Sirene (INSEE)</td>
+              </tr>
+              <tr>
+                <td>N° de TVA intracommunautaire</td>
+                <td>« TVA non applicable, art. 293 B du CGI »</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td><a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a></td>
+              </tr>
+              <tr>
+                <td>Téléphone</td>
+                <td>07 44 96 71 70</td>
+              </tr>
+            </table>
+            <div class="legal-highlight">
+              <strong>Fidelavis</strong> est un produit édité et exploité par Compush Media. Toute question relative à Fidelavis peut être adressée à l'email ci-dessus.
+            </div>
+          </article>
+
+          <!-- 2. Directeur de publication -->
+          <article class="legal-section" id="directeur">
+            <div class="legal-section__number">Article 02</div>
+            <h2 class="legal-section__title">Directeur de la publication</h2>
+            <p>Le directeur de la publication du site <strong>compushmedia.com</strong> est :</p>
+            <table class="legal-info-table">
+              <tr>
+                <td>Nom et prénom</td>
+                <td>Ververt JC</td>
+              </tr>
+              <tr>
+                <td>Qualité</td>
+                <td>Directeur</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td><a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a></td>
+              </tr>
+            </table>
+          </article>
+
+          <!-- 3. Hébergement -->
+          <article class="legal-section" id="hebergement">
+            <div class="legal-section__number">Article 03</div>
+            <h2 class="legal-section__title">Hébergement</h2>
+            <p>Le site <strong>compushmedia.fr</strong> est hébergé par :</p>
+            <table class="legal-info-table">
+              <tr>
+                <td>Hébergeur</td>
+                <td>GitHub, Inc.</td>
+              </tr>
+              <tr>
+                <td>Service</td>
+                <td>GitHub Pages</td>
+              </tr>
+              <tr>
+                <td>Siège social</td>
+                <td>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</td>
+              </tr>
+              <tr>
+                <td>Site web</td>
+                <td><a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">pages.github.com</a></td>
+              </tr>
+            </table>
+          </article>
+
+          <!-- 4. Propriété intellectuelle -->
+          <article class="legal-section" id="propriete">
+            <div class="legal-section__number">Article 04</div>
+            <h2 class="legal-section__title">Propriété intellectuelle</h2>
+            <p>L'ensemble du contenu de ce site (textes, images, graphismes, logos, icônes, éléments sonores ou visuels, mise en page, code source) constitue des œuvres protégées au sens du Code de la propriété intellectuelle.</p>
+            <p>Toute reproduction, représentation, modification, publication ou transmission, totale ou partielle, de ces éléments, par quelque moyen que ce soit, sans autorisation expresse et préalable de <strong>Compush Media</strong>, est strictement interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+            <p>La marque <strong>Fidelavis</strong>, le logo associé et tous les éléments graphiques liés au produit sont la propriété exclusive de <strong>Compush Media</strong>. Toute utilisation non autorisée est susceptible de poursuites judiciaires.</p>
+            <p>Les droits d'utilisation conférés à l'utilisateur sont limités à un usage strictement privé, personnel et non commercial. Toute autre utilisation est soumise à autorisation préalable et écrite de Compush Media.</p>
+          </article>
+
+          <!-- 5. Limitation de responsabilité -->
+          <article class="legal-section" id="responsabilite">
+            <div class="legal-section__number">Article 05</div>
+            <h2 class="legal-section__title">Limitation de responsabilité</h2>
+            <p>Compush Media s'efforce de fournir sur ce site des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, inexactitudes ou carences dans la mise à jour des informations publiées.</p>
+            <p>Compush Media ne saurait être tenue responsable de tout préjudice direct ou indirect résultant de l'utilisation des informations ou contenus disponibles sur le présent site, ni de l'impossibilité d'accéder au site en raison d'une interruption technique, d'une maintenance, d'un cas de force majeure ou de toute autre circonstance indépendante de sa volonté.</p>
+            <p>L'utilisateur reste seul responsable de l'utilisation qu'il fait des informations disponibles sur le site et des conséquences qui pourraient en découler.</p>
+          </article>
+
+          <!-- 6. Liens hypertextes -->
+          <article class="legal-section" id="liens">
+            <div class="legal-section__number">Article 06</div>
+            <h2 class="legal-section__title">Liens hypertextes</h2>
+            <p>Le site peut contenir des liens vers des sites tiers. Compush Media n'exerce aucun contrôle sur ces sites externes et décline toute responsabilité quant à leur contenu, leurs pratiques en matière de données personnelles, ou toute information susceptible d'y être publiée.</p>
+            <p>La création de liens hypertextes vers ce site est soumise à l'accord préalable et écrit de Compush Media. Pour toute demande, veuillez contacter : <a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a>.</p>
+          </article>
+
+          <!-- 7. Cookies -->
+          <article class="legal-section" id="cookies">
+            <div class="legal-section__number">Article 07</div>
+            <h2 class="legal-section__title">Cookies</h2>
+            <p>Le site <strong>compushmedia.com</strong> peut être amené à utiliser des cookies. Un cookie est un petit fichier texte enregistré sur l'appareil de l'utilisateur lors de la visite d'un site, permettant notamment de mémoriser des informations relatives à la navigation.</p>
+            <p>Les cookies utilisés sur ce site sont :</p>
+            <table class="legal-info-table">
+              <tr>
+                <td>Cookies techniques</td>
+                <td>Strictement nécessaires au bon fonctionnement du site (mémorisation des préférences, session).</td>
+              </tr>
+              <tr>
+                <td>Cookies analytiques</td>
+                <td>Permettent de mesurer l'audience du site (visites, pages consultées) de manière anonyme.</td>
+              </tr>
+            </table>
+            <p>Conformément à la réglementation en vigueur, les cookies non strictement nécessaires sont déposés uniquement après recueil de votre consentement. Vous pouvez à tout moment modifier vos préférences depuis les paramètres de votre navigateur.</p>
+            <p>Pour plus d'informations sur la gestion de vos données, consultez notre <a href="politique-confidentialite.html">Politique de confidentialité</a>.</p>
+          </article>
+
+          <!-- 8. Données personnelles -->
+          <article class="legal-section" id="donnees">
+            <div class="legal-section__number">Article 08</div>
+            <h2 class="legal-section__title">Données personnelles</h2>
+            <p>Le traitement des données personnelles collectées sur ce site est encadré par notre <a href="politique-confidentialite.html">Politique de confidentialité</a>, conforme au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679) et à la loi Informatique et Libertés modifiée.</p>
+            <p>Vous disposez des droits suivants sur vos données : droit d'accès, de rectification, d'effacement, de portabilité, d'opposition et de limitation du traitement. Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a>.</p>
+            <p>En cas de litige, vous pouvez adresser une réclamation auprès de la <strong>CNIL</strong> — Commission Nationale de l'Informatique et des Libertés (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>).</p>
+          </article>
+
+          <!-- 9. Contact -->
+          <article class="legal-section" id="contact-legal">
+            <div class="legal-section__number">Article 09</div>
+            <h2 class="legal-section__title">Contact</h2>
+            <p>Pour toute question relative aux présentes mentions légales, ou pour signaler un contenu illicite, vous pouvez nous contacter :</p>
+            <table class="legal-info-table">
+              <tr>
+                <td>Par email</td>
+                <td><a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a></td>
+              </tr>
+              <tr>
+                <td>Par courrier</td>
+                <td>Compush Media 61 Bd National 92250 La Garenne Colombes</td>
+              </tr>
+            </table>
+            <div class="legal-highlight">
+              Ces mentions légales sont susceptibles d'être modifiées à tout moment. Nous vous invitons à les consulter régulièrement. La date de dernière mise à jour est indiquée en haut de cette page.
+            </div>
+          </article>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="LogoCompushMédiapetit.png" alt="Compush Media" class="logo__img--sm" />
+          </div>
+          <p class="footer__tagline">Éditeur de Fidelavis</p>
+          <p class="footer__desc">Agence spécialisée en croissance locale et fidélisation client pour les commerces de proximité.</p>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Navigation</h4>
+          <ul class="footer__nav-list">
+            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html#fidelavis">Fidelavis</a></li>
+            <li><a href="index.html#approche">Notre approche</a></li>
+            <li><a href="index.html#offres">Offres</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Contact</h4>
+          <ul class="footer__nav-list">
+            <li><a href="index.html#contact">Demander une démo</a></li>
+            <li><a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Légal</h4>
+          <ul class="footer__nav-list">
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Compush Media — Tous droits réservés. Éditeur de <strong>Fidelavis</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

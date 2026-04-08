@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Compush Media — Fidélisation client restaurant & commerces | Solution NFC Fidelavis</title>
+  <meta name="description" content="Augmentez vos clients réguliers avec Fidelavis, la solution de fidélisation par carte NFC pour restaurants et commerces. Compush Media vous aide à capter, fidéliser et relancer vos clients efficacement." />
+
+  <link rel="canonical" href="https://www.compushmedia.com/" />
+
+  <meta property="og:title" content="Compush Media — Fidélisation client restaurant & commerces | Solution NFC Fidelavis" />
+  <meta property="og:description" content="Augmentez vos clients réguliers avec Fidelavis, la solution de fidélisation par carte NFC pour restaurants et commerces. Compush Media vous aide à capter, fidéliser et relancer vos clients efficacement." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.compushmedia.com/" />
+  <meta property="og:image" content="https://www.compushmedia.com/assets/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Compush Media — Fidélisation client restaurant & commerces | Solution NFC Fidelavis" />
+  <meta name="twitter:description" content="Augmentez vos clients réguliers avec Fidelavis, la solution de fidélisation par carte NFC pour restaurants et commerces." />
+  <meta name="twitter:image" content="https://www.compushmedia.com/assets/og-cover.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#accueil" class="logo" aria-label="Compush Media - Retour à l'accueil">
+        <img src="LogoCompushMédia.png" alt="Logo Compush Media" class="logo__image" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#accueil" class="nav__link">Accueil</a></li>
+          <li><a href="#fidelavis" class="nav__link">Fidelavis</a></li>
+          <li><a href="#approche" class="nav__link">Notre approche</a></li>
+          <li><a href="#offres" class="nav__link">Offres</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--primary btn--sm header__cta">Demander une démo</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <div class="badge">
+            <span class="badge__dot"></span>
+            Agence experte &amp; éditeur de Fidelavis
+          </div>
+
+          <h1 class="hero__title">
+            Transformez vos visiteurs en
+            <em>clients réguliers</em>
+          </h1>
+
+          <p class="hero__subtitle">
+            Compush Media édite Fidelavis, une solution de fidélisation par carte NFC conçue pour capter vos clients, les faire revenir et augmenter leur fréquence de visite.
+          </p>
+
+          <p class="hero__proof">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Déjà utilisé en conditions réelles pour générer des inscriptions et des retours clients
+          </p>
+
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary btn--lg">Tester Fidelavis gratuitement</a>
+            <button class="btn btn--ghost hero__video-btn" id="videoBtn">
+              <span class="hero__video-play">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              Voir comment ce restaurateur utilise Fidelavis<em>53 sec</em>
+            </button>
+          </div>
+          <p class="cta-live-proof">
+            <span class="dot"></span>
+            <span id="liveCount">12</span> commerces ont demandé une démo ce mois-ci
+          </p>
+        </div>
+
+        <div class="hero__visual reveal reveal--delay">
+          <div class="phone-wrap">
+            <div class="phone-float-label phone-float-label--1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+              Mini-app installable
+            </div>
+            <div class="phone-float-label phone-float-label--2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+              Coupons
+            </div>
+            <div class="phone-float-label phone-float-label--3">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              Notifications
+            </div>
+            <div class="phone-float-label phone-float-label--4">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Avis Google
+            </div>
+
+            <div class="phone">
+              <div class="phone__notch"></div>
+              <div class="phone__screen">
+                <div class="phone__status-bar">
+                  <span>9:41</span>
+                  <span class="phone__icons">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M1 6l5 5 5-5 5 5 5-5 2 2-7 7-5-5-5 5L0 8z"/></svg>
+                  </span>
+                </div>
+                <div class="phone__app">
+                  <div class="app__header">
+                    <div class="app__logo">F</div>
+                    <div>
+                      <div class="app__title">Fidelavis</div>
+                      <div class="app__sub">Votre fidélité récompensée</div>
+                    </div>
+                  </div>
+                  <div class="app__card">
+                    <div class="app__card-label">Offre du moment</div>
+                    <div class="app__card-offer">-15%</div>
+                    <div class="app__card-detail">Sur votre prochaine visite</div>
+                    <div class="app__card-expires">Valable jusqu'au 30 avril</div>
+                  </div>
+                  <div class="app__points">
+                    <div class="app__points-label">Vos points fidélité</div>
+                    <div class="app__points-bar">
+                      <div class="app__points-fill"></div>
+                    </div>
+                    <div class="app__points-count"><strong>320</strong> / 500 pts</div>
+                  </div>
+                  <div class="app__nfc">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M8.5 8.5C9.5 7.5 10.7 7 12 7s2.5.5 3.5 1.5 1.5 2.2 1.5 3.5-.5 2.5-1.5 3.5"/><path d="M9.5 9.5c.7-.7 1.5-1 2.5-1s1.8.3 2.5 1 1 1.5 1 2.5-.3 1.8-1 2.5"/></svg>
+                    Touchez la carte NFC
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nfc-card">
+              <div class="nfc-card__logo">F</div>
+              <div class="nfc-card__wave">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M8.5 8.5C9.5 7.5 10.7 7 12 7s2.5.5 3.5 1.5 1.5 2.2 1.5 3.5-.5 2.5-1.5 3.5"/><path d="M9.5 9.5c.7-.7 1.5-1 2.5-1s1.8.3 2.5 1 1 1.5 1 2.5-.3 1.8-1 2.5"/></svg>
+              </div>
+              <div class="nfc-card__text">Carte NFC Fidelavis</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator">
+        <div class="hero__scroll-line"></div>
+        <span>Découvrir l’offre</span>
+      </div>
+    </section>
+
+    <section class="section section--light" id="approche">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">À propos</div>
+          <h2 class="section__title">Une agence spécialisée, pensée pour les commerces locaux</h2>
+        </div>
+
+        <div class="about__intro reveal">
+          <p>
+            Compush Media accompagne les commerces qui veulent attirer plus de clients, mieux les fidéliser et structurer leur croissance.
+            Nous concevons des systèmes concrets, simples à déployer et pensés pour générer de vrais résultats.
+            C'est dans cette logique que nous avons créé <strong>Fidelavis</strong>, notre solution phare de fidélisation intelligente.
+          </p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar reveal">
+            <div class="pillar__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="pillar__title">Stratégie concrète</h3>
+            <p class="pillar__text">Une approche pensée pour générer des résultats visibles, pas des actions floues.</p>
+          </div>
+
+          <div class="pillar reveal reveal--delay">
+            <div class="pillar__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="pillar__title">Fidélisation intelligente</h3>
+            <p class="pillar__text">Des parcours simples qui encouragent les clients à revenir plus souvent.</p>
+          </div>
+
+          <div class="pillar reveal reveal--delay-2">
+            <div class="pillar__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="pillar__title">Déploiement rapide</h3>
+            <p class="pillar__text">Une mise en place claire, fluide et adaptée aux commerces de proximité.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="fidelavis">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag section__tag--gold">Notre solution phare</div>
+          <h2 class="section__title section__title--light">Fidelavis, notre solution de fidélisation pour commerces de proximité</h2>
+          <p class="section__intro section__intro--light">
+            Fidelavis permet aux restaurants, salons, boutiques et commerces locaux de transformer une visite en relation durable grâce à une carte NFC intelligente, une mini-app installable, des offres et un pilotage simple depuis un tableau de bord.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature reveal" data-tooltip="Le client approche son téléphone de la carte et est instantanément redirigé vers votre offre — sans application à télécharger.">
+            <div class="feature__number">01</div>
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M8.5 8.5C9.5 7.5 10.7 7 12 7s2.5.5 3.5 1.5 1.5 2.2 1.5 3.5-.5 2.5-1.5 3.5"/><path d="M9.5 9.5c.7-.7 1.5-1 2.5-1s1.8.3 2.5 1 1 1.5 1 2.5-.3 1.8-1 2.5"/></svg>
+            </div>
+            <h3 class="feature__title">Carte NFC intelligente</h3>
+            <p class="feature__text">Le client touche ou scanne la carte pour entrer dans l'univers du commerce.</p>
+          </div>
+
+          <div class="feature reveal reveal--delay" data-tooltip="Chaque inscription enrichit votre base : nom, email, téléphone. Vous pouvez relancer vos clients à tout moment depuis le tableau de bord.">
+            <div class="feature__number">02</div>
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="feature__title">Collecte de contacts</h3>
+            <p class="feature__text">Constituez une base de contacts exploitable pour mieux fidéliser.</p>
+          </div>
+
+          <div class="feature reveal reveal--delay-2" data-tooltip="Le client ajoute l'app à son écran d'accueil en 2 clics — sans passer par l'App Store. Elle reste visible comme une vraie application.">
+            <div class="feature__number">03</div>
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+            </div>
+            <h3 class="feature__title">Mini-app installable</h3>
+            <p class="feature__text">Une expérience simple à installer sur le téléphone du client, sans friction inutile.</p>
+          </div>
+
+          <div class="feature reveal" data-tooltip="Exemple : -15% sur la prochaine visite, café offert au 5e passage. Les coupons sont activables depuis le tableau de bord en quelques secondes.">
+            <div class="feature__number">04</div>
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            </div>
+            <h3 class="feature__title">Coupons &amp; offres mensuelles</h3>
+            <p class="feature__text">Encouragez le retour avec des avantages pensés pour créer de la récurrence.</p>
+          </div>
+
+          <div class="feature reveal reveal--delay" data-tooltip="Envoyez un message ciblé à vos clients inscrits : nouvelle offre, événement, rappel. Le taux d'ouverture des notifications push est 5× supérieur aux emails.">
+            <div class="feature__number">05</div>
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3 class="feature__title">Notifications push</h3>
+            <p class="feature__text">Restez présent dans le téléphone du client avec des messages ciblés.</p>
+          </div>
+
+          <div class="feature reveal reveal--delay-2" data-tooltip="Vue en temps réel : nombre de scans, inscrits, coupons utilisés, retours clients. Tout accessible depuis un navigateur, sur mobile ou desktop.">
+            <div class="feature__number">06</div>
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3 class="feature__title">Tableau de bord commerçant</h3>
+            <p class="feature__text">Pilotez votre système de fidélisation avec une vue claire de l'activité.</p>
+          </div>
+
+          <div class="feature reveal" data-tooltip="Identifiez vos clients les plus fidèles, ceux qui ne sont pas revenus depuis 30 jours, et relancez-les au bon moment avec la bonne offre.">
+            <div class="feature__number">07</div>
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="feature__title">Suivi de la fidélisation</h3>
+            <p class="feature__text">Visualisez les interactions, les inscriptions et les retours clients.</p>
+          </div>
+
+          <div class="feature reveal reveal--delay" data-tooltip="Après une visite, Fidelavis propose automatiquement au client de laisser un avis Google — au moment où son expérience est encore fraîche.">
+            <div class="feature__number">08</div>
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="feature__title">Valorisation des avis Google</h3>
+            <p class="feature__text">Renforcez votre réputation avec une mécanique qui encourage l'engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Fonctionnement</div>
+          <h2 class="section__title">Un parcours simple, rapide et efficace</h2>
+          <p class="section__intro">Une mise en place fluide, pensée pour ne pas complexifier le service.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__number"><span>01</span></div>
+            <div class="step__content">
+              <h3 class="step__title">Le client scanne ou touche la carte</h3>
+              <p class="step__text">Une action simple qui déclenche immédiatement la découverte de l'offre.</p>
+            </div>
+            <div class="step__connector"></div>
+          </div>
+
+          <div class="step reveal reveal--delay">
+            <div class="step__number"><span>02</span></div>
+            <div class="step__content">
+              <h3 class="step__title">Il découvre l'offre et s'inscrit</h3>
+              <p class="step__text">Le parcours est conçu pour être clair, rapide et accessible depuis son téléphone.</p>
+            </div>
+            <div class="step__connector"></div>
+          </div>
+
+          <div class="step reveal reveal--delay-2">
+            <div class="step__number"><span>03</span></div>
+            <div class="step__content">
+              <h3 class="step__title">Le commerce peut le faire revenir</h3>
+              <p class="step__text">Coupons, emails et notifications permettent de relancer intelligemment la relation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Positionnement</div>
+          <h2 class="section__title">Bien plus qu'une agence classique</h2>
+        </div>
+
+        <div class="differents">
+          <div class="different reveal">
+            <div class="different__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="different__body">
+              <h3 class="different__title">Nous créons des systèmes concrets</h3>
+              <p class="different__text">Notre approche vise l'impact réel sur la fidélisation et la récurrence client.</p>
+            </div>
+          </div>
+
+          <div class="different reveal reveal--delay">
+            <div class="different__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <div class="different__body">
+              <h3 class="different__title">Nous avons développé notre propre solution</h3>
+              <p class="different__text">Fidelavis a été conçu en interne pour répondre à un besoin de terrain précis.</p>
+            </div>
+          </div>
+
+          <div class="different reveal">
+            <div class="different__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="different__body">
+              <h3 class="different__title">Nous pensons usage et conversion</h3>
+              <p class="different__text">Chaque parcours est pensé pour être simple à comprendre et efficace à activer.</p>
+            </div>
+          </div>
+
+          <div class="different reveal reveal--delay">
+            <div class="different__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="different__body">
+              <h3 class="different__title">Nous accompagnons le déploiement</h3>
+              <p class="different__text">Nous aidons les commerçants à mettre en place le dispositif et à l'activer correctement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gold-accent">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Résultats</div>
+          <h2 class="section__title">Premiers résultats observés</h2>
+          <p class="section__intro">Résultats observés lors d’un déploiement accompagné de Fidelavis sur le terrain.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <div class="stat__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M8.5 8.5C9.5 7.5 10.7 7 12 7s2.5.5 3.5 1.5 1.5 2.2 1.5 3.5-.5 2.5-1.5 3.5"/><path d="M9.5 9.5c.7-.7 1.5-1 2.5-1s1.8.3 2.5 1 1 1.5 1 2.5-.3 1.8-1 2.5"/></svg>
+            </div>
+            <div class="stat__number" data-target="124">124</div>
+            <div class="stat__unit">scans</div>
+            <div class="stat__label">Interactions NFC enregistrées</div>
+          </div>
+          <div class="stat reveal reveal--delay">
+            <div class="stat__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="stat__number" data-target="38">38</div>
+            <div class="stat__unit">inscrits</div>
+            <div class="stat__label">Clients entrés dans le système</div>
+          </div>
+          <div class="stat reveal reveal--delay-2">
+            <div class="stat__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+            </div>
+            <div class="stat__number" data-target="14">14</div>
+            <div class="stat__unit">installations</div>
+            <div class="stat__label">Mini-app installée sur mobile</div>
+          </div>
+          <div class="stat reveal reveal--delay">
+            <div class="stat__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <div class="stat__number" data-target="6">6</div>
+            <div class="stat__unit">retours</div>
+            <div class="stat__label">Clients revenus dans le commerce</div>
+          </div>
+        </div>
+
+        <p class="stats__note reveal">Résultats observés avec accompagnement et optimisation sur le terrain.</p>
+        <p class="stats__disclaimer reveal">Données issues d'un premier déploiement test. Le système s'améliore et s'optimise avec le temps.</p>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Cibles</div>
+          <h2 class="section__title">Pensé pour les commerces à forte récurrence</h2>
+          <p class="section__intro">Notre approche s'adresse aux commerces qui ont besoin de faire revenir leurs clients plus souvent, sans multiplier les outils ni complexifier leur fonctionnement.</p>
+        </div>
+
+        <div class="targets">
+          <div class="target reveal">
+            <div class="target__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            </div>
+            <h3 class="target__name">Restaurants</h3>
+          </div>
+
+          <div class="target reveal reveal--delay">
+            <div class="target__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3 class="target__name">Cafés</h3>
+          </div>
+
+          <div class="target reveal reveal--delay-2">
+            <div class="target__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg>
+            </div>
+            <h3 class="target__name">Salons de coiffure</h3>
+          </div>
+
+          <div class="target reveal">
+            <div class="target__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <h3 class="target__name">Boutiques de proximité</h3>
+          </div>
+
+          <div class="target reveal reveal--delay">
+            <div class="target__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="target__name">Concepts locaux</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="accompagnement">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag section__tag--gold">Accompagnement</div>
+          <h2 class="section__title section__title--light">Un accompagnement concret pour déployer le système</h2>
+          <p class="section__intro section__intro--light">Compush Media ne se contente pas de fournir un outil&nbsp;: nous accompagnons aussi sa mise en place et son activation.</p>
+        </div>
+
+        <div class="support-cards">
+          <div class="support-card reveal">
+            <div class="support-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="support-card__title">Mise en place du dispositif</h3>
+            <p class="support-card__text">Nous aidons à lancer le système de manière claire et cohérente.</p>
+          </div>
+
+          <div class="support-card reveal reveal--delay">
+            <div class="support-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <h3 class="support-card__title">Formation rapide de l'équipe</h3>
+            <p class="support-card__text">Les équipes comprennent rapidement comment présenter et utiliser le dispositif.</p>
+          </div>
+
+          <div class="support-card reveal reveal--delay-2">
+            <div class="support-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <h3 class="support-card__title">Optimisation des performances</h3>
+            <p class="support-card__text">Nous améliorons le parcours pour renforcer l'activation et les retours clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cream" id="offres">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Tarifs</div>
+          <h2 class="section__title">Des offres claires pour lancer votre fidélisation</h2>
+        </div>
+
+        <div class="pricing">
+          <div class="pricing-card reveal">
+            <div class="pricing-card__header">
+              <div class="pricing-card__name">Essentiel</div>
+              <div class="pricing-card__desc">Parfait pour démarrer simplement</div>
+              <div class="pricing-card__price">
+                <span class="pricing-card__amount">97€</span>
+                <span class="pricing-card__period">/mois</span>
+              </div>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fidélisation client</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Collecte de contacts</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Coupons &amp; offres</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mini-app installable</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tableau de bord</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Formulaire d'inscription</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 10 cartes NFC incluses</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Emails automatisés 12 mois</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--full">Choisir Essentiel</a>
+          </div>
+
+          <div class="pricing-card pricing-card--featured reveal reveal--delay">
+            <div class="pricing-card__badge">Le plus complet</div>
+            <div class="pricing-card__header">
+              <div class="pricing-card__name">Pro</div>
+              <div class="pricing-card__desc">Idéal pour les commerces qui veulent maximiser leur fidélisation et leur rétention client</div>
+              <div class="pricing-card__price">
+                <span class="pricing-card__amount">149€</span>
+                <span class="pricing-card__period">/mois</span>
+              </div>
+            </div>
+            <ul class="pricing-card__features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Toute l'offre Essentiel</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Notifications push</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Réponse automatique avis Google</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automatisations avancées</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Accompagnement renforcé</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--full">Choisir Pro</a>
+          </div>
+        </div>
+
+        <div class="pricing__note reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Frais d'installation : <strong>199€</strong> une seule fois, inclut la configuration complète et la livraison des cartes NFC.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Témoignages</div>
+          <h2 class="section__title">Une approche perçue comme simple, concrète et moderne</h2>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial reveal">
+            <div class="testimonial__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial__quote">"Le système est simple à comprendre pour les clients et facile à déployer."</blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">M</div>
+              <div>
+                <div class="testimonial__name">Marc</div>
+                <div class="testimonial__role">Restaurateur</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal reveal--delay">
+            <div class="testimonial__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial__quote">"L'idée de fidélisation via carte NFC rend l'expérience plus moderne et plus engageante."</blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">S</div>
+              <div>
+                <div class="testimonial__name">Sarah</div>
+                <div class="testimonial__role">Commerçante</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal reveal--delay-2">
+            <div class="testimonial__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial__quote">"Compush Media apporte une solution concrète, pas juste un discours marketing."</blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">J</div>
+              <div>
+                <div class="testimonial__name">Julien</div>
+                <div class="testimonial__role">Gérant</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-final" id="contact">
+      <div class="container">
+        <div class="cta-final__inner reveal">
+          <div class="section__tag section__tag--gold">Passez à l'action</div>
+          <h2 class="cta-final__title">Prêt à faire revenir plus de clients&nbsp;?</h2>
+          <p class="cta-final__text">
+            Découvrez comment Compush Media et Fidelavis peuvent aider votre commerce à fidéliser plus intelligemment, avec une solution moderne, simple à déployer et pensée pour le terrain.
+          </p>
+
+          <form class="demo-form" id="demoForm" novalidate>
+            <div class="demo-form__row">
+              <div class="demo-form__field">
+                <label for="name">Votre nom</label>
+                <input type="text" id="name" name="name" placeholder="Prénom Nom" required />
+              </div>
+              <div class="demo-form__field">
+                <label for="email">Email professionnel</label>
+                <input type="email" id="email" name="email" placeholder="vous@commerce.fr" required />
+              </div>
+            </div>
+            <div class="demo-form__row">
+              <div class="demo-form__field">
+                <label for="business">Type de commerce</label>
+                <select id="business" name="business">
+                  <option value="">Choisissez votre activité</option>
+                  <option>Restaurant</option>
+                  <option>Café / Bar</option>
+                  <option>Salon de coiffure</option>
+                  <option>Boutique de proximité</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="demo-form__field">
+                <label for="phone">Téléphone (optionnel)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+33 6 00 00 00 00" />
+              </div>
+            </div>
+            <div class="social-proof">
+              <div class="social-proof__avatars">
+                <span>C</span><span>M</span><span>L</span>
+              </div>
+              <p><strong id="demoCount">12</strong> commerces ont demandé une démo ce mois-ci</p>
+            </div>
+            <button type="submit" class="btn btn--primary btn--xl btn--full">
+              Demander ma démonstration personnalisée
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <p class="demo-form__mention">Réponse sous 24h — Sans engagement</p>
+          </form>
+
+          <div class="cta-final__links">
+            <a href="#fidelavis" class="cta-final__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              Découvrir Fidelavis
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#accueil" class="logo footer__logo" aria-label="Compush Media - Retour à l'accueil">
+            <img src="LogoCompushMédiapetit.png" alt="Logo Compush Media" class="logo__image logo__image--footer" />
+          </a>
+          <p class="footer__tagline">Éditeur de Fidelavis</p>
+          <p class="footer__desc">Agence spécialisée en croissance locale et fidélisation client pour les commerces de proximité.</p>
+        </div>
+
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Navigation</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#fidelavis">Fidelavis</a></li>
+            <li><a href="#approche">Notre approche</a></li>
+            <li><a href="#offres">Offres</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Contact</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#contact">Demander une démo</a></li>
+            <li><a href="mailto:contact@fidelavis.com">contact@fidelavis.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-group">
+          <h4 class="footer__nav-title">Légal</h4>
+          <ul class="footer__nav-list">
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 Compush Media — Tous droits réservés. Éditeur de <strong>Fidelavis</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" id="mobileCta">
+    <div class="mobile-cta__inner">
+      <div class="mobile-cta__text">
+        <strong>Fidelavis</strong>
+        <span>Fidélisez plus de clients</span>
+      </div>
+      <a href="#contact" class="btn btn--primary btn--sm">Démo gratuite</a>
+    </div>
+  </div>
+
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Démo Fidelavis">
+    <div class="video-modal__backdrop" id="videoBackdrop"></div>
+    <div class="video-modal__content">
+      <button class="video-modal__close" id="videoClose" aria-label="Fermer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="video-modal__header">
+        <div class="section__tag">Cas réel client</div>
+        <h3>Un restaurateur explique comment il utilise Fidelavis</h3>
+        <p>Découvrez comment il a mis en place Fidelavis dans son restaurant et comment il fait revenir ses clients chaque mois.</p>
+      </div>
+      <div class="video-modal__player">
+        <video
+          id="demoVideo"
+          class="video-modal__video"
+          src="interview-web.mp4"
+          controls
+          preload="none"
+          poster=""
+          playsinline
+          aria-label="Interview de démonstration Fidelavis"
+        ></video>
+      </div>
+      <p class="video-proof__context">Exemple réel dans un restaurant — applicable à tous les commerces locaux (coiffure, esthétique, boutiques…)</p>
+      <div class="video-modal__footer">
+        <a href="#contact" class="btn btn--primary" id="videoCta">Je veux tester dans mon commerce</a>
+        <p>Mise en place simple — résultats visibles rapidement-Réponse sous 24h — Sans engagement</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="exit-popup" id="exitPopup" role="dialog" aria-modal="true" aria-label="Offre spéciale">
+    <div class="exit-popup__backdrop" id="exitBackdrop"></div>
+    <div class="exit-popup__content">
+      <button class="exit-popup__close" id="exitClose" aria-label="Fermer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="exit-popup__badge">Avant de partir</div>
+      <h3 class="exit-popup__title">Obtenez votre démonstration<br><em>1 mois offert</em></h3>
+      <p class="exit-popup__text">Laissez-nous votre email et recevez une démonstration personnalisée de Fidelavis, avec 1 mois offert pour tout nouveau commerce.</p>
+      <form class="exit-popup__form" id="exitForm" novalidate>
+        <input type="email" id="exitEmail" placeholder="votre@email.fr" required />
+        <button type="submit" class="btn btn--primary btn--full">
+          J'en profite
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+      <p class="exit-popup__mention">Offre valable pour tout nouveau commerce. Sans engagement.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
