@@ -5,6 +5,22 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── 0. Pré-remplissage email via URL (?email=xxx) ────── */
+  const urlParams   = new URLSearchParams(window.location.search);
+  const emailFromUrl = urlParams.get('email');
+  if (emailFromUrl) {
+    const mainEmail = document.getElementById('email');
+    if (mainEmail) {
+      mainEmail.value = decodeURIComponent(emailFromUrl);
+      // Scroll vers le formulaire après chargement
+      setTimeout(() => {
+        const contact = document.getElementById('contact');
+        if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        mainEmail.focus();
+      }, 600);
+    }
+  }
+
   /* ── 1. Header scroll state ──────────────────────────── */
   const header = document.getElementById('header');
 
