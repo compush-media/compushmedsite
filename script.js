@@ -394,6 +394,21 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { emailInput.style.borderColor = ''; }, 2000);
         return;
       }
+
+      // Envoi vers Make → Google Sheets
+      fetch('https://hook.eu1.make.com/brfzfyxl9xat8thjcgdk8wm0pmdwgpw5', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          date:      new Date().toLocaleString('fr-FR'),
+          nom:       '',
+          email:     emailInput.value.trim(),
+          telephone: '',
+          activite:  '',
+          source:    'Popup exit-intent'
+        })
+      }).catch(() => {});
+
       const btn = exitForm.querySelector('button');
       btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> C'est noté — à très vite !`;
       btn.style.background = '#4CAF50';
