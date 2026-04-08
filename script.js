@@ -395,6 +395,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      const capturedEmail = emailInput.value.trim();
+
       // Envoi vers Make → Google Sheets
       fetch('https://hook.eu1.make.com/brfzfyxl9xat8thjcgdk8wm0pmdwgpw5', {
         method: 'POST',
@@ -402,18 +404,37 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({
           date:      new Date().toLocaleString('fr-FR'),
           nom:       '',
-          email:     emailInput.value.trim(),
+          email:     capturedEmail,
           telephone: '',
           activite:  '',
           source:    'Popup exit-intent'
         })
       }).catch(() => {});
 
-      const btn = exitForm.querySelector('button');
-      btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> C'est noté — à très vite !`;
-      btn.style.background = '#4CAF50';
-      btn.style.borderColor = '#4CAF50';
-      setTimeout(closeExit, 2500);
+      // Afficher l'état succès avec CTA vers le formulaire
+      exitForm.style.display = 'none';
+      exitForm.previousElementSibling.style.display = 'none'; // masque le texte intro
+      const exitSuccess = document.getElementById('exitSuccess');
+      if (exitSuccess) exitSuccess.classList.add('visible');
+
+      // CTA → scroll vers formulaire + pré-remplir email
+      const exitFormCta = document.getElementById('exitFormCta');
+      if (exitFormCta) {
+        exitFormCta.addEventListener('click', () => {
+          closeExit();
+          const mainEmail = document.getElementById('email');
+          if (mainEmail) mainEmail.value = capturedEmail;
+          setTimeout(() => {
+            const contact = document.getElementById('contact');
+            if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (mainEmail) mainEmail.focus();
+          }, 300);
+        });
+      }
+
+      // Bouton "Non merci"
+      const exitSkip = document.getElementById('exitSkip');
+      if (exitSkip) exitSkip.addEventListener('click', closeExit);
     });
   }
 
