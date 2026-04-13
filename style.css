@@ -1972,6 +1972,12 @@ button { font-family: inherit; }
   text-align: center;
 }
 .video-modal__footer p { font-size: 0.76rem; color: var(--clr-text-3); }
+.btn-text-short { display: none; }
+
+@media (max-width: 480px) {
+  .btn-text-long  { display: none; }
+  .btn-text-short { display: inline; }
+}
 
 /* ============================================================
    EXIT-INTENT POPUP
