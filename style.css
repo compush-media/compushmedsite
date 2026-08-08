@@ -1386,7 +1386,12 @@ button { font-family: inherit; }
 ============================================================ */
 .pricing {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* Une seule offre depuis le passage au prix unique. « minmax(0, 480px) »
+     plutôt que « 1fr » : 1fr a un min-width implicite égal au contenu, et la
+     carte refusait de descendre sous la largeur de son plus long libellé —
+     elle débordait de 17 px sur un iPhone. */
+  grid-template-columns: minmax(0, 480px);
+  justify-content: center;
   gap: var(--sp-lg);
   max-width: 900px;
   margin: 0 auto var(--sp-lg);
@@ -2207,7 +2212,7 @@ button { font-family: inherit; }
   .stats           { grid-template-columns: repeat(2, 1fr); }
   .targets         { grid-template-columns: repeat(3, 1fr); }
   .support-cards   { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
-  .pricing         { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .pricing         { grid-template-columns: minmax(0, 1fr); max-width: 480px; margin-left: auto; margin-right: auto; }
   .pricing-card--featured { transform: none; }
   .pricing-card--featured:hover { transform: translateY(-6px); }
   .testimonials    { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
